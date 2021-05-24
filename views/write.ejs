@@ -1,0 +1,26 @@
+<h1>Hi <%= name %>!!</h1>
+<nav>
+    <form action = "/YourBlogs" method = "post">
+        <button type = "submit">Your Blogs.</button>
+    </form><br>
+    <a href = "/">LogOut</a>
+</nav>
+<h2>Add a new Blog!</h2>
+
+<form action = "/" method = "post">
+    <label>Tile of the Blog.</label><br>
+    <input type  = "text" name = "Title" minlength = "4" maxlength = "50" placeholder = "Write beetween 4 to 50 characters" size = "45" autocomplete="off"><br><br>
+    <label>Write the Content.</label><br>
+    <input type  = "text" name = "Content" minlength = "100" maxlength = "1000" placeholder = "Write beetween 100 to 1000 characters" size = "500" autocomplete="off"><br><br>
+    <button id = "submit" type = "submit">Add the blog.</button>
+</form>
+<br><br>
+<script>
+    document.getElementById("submit").addEventListener("click",function(){
+        let output = confirm("Are you sure you want to post this blog?");
+        if(output == "cancel"){
+            
+        }
+    });
+</script>
+<%- include("footer.ejs") %>

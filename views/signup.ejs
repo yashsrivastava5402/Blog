@@ -1,0 +1,17 @@
+<%- include("header.ejs") %>
+
+<h1>Sign Up</h1>
+<form action = "/Write" method = "post">
+    <label>Enter your Name.</label><br><br>
+    <input type = "text" name = "name" placeholder = "Write your name." minlength = "2" size = "45" autocomplete = "off" required><br><br>
+    <label>Enter your Age.</label><br><br>
+    <input type = "number" name = "age" placeholder = "Write your age." minlength = "1" size = "45" autocomplete = "off" required><br><br>
+    <label>Enter your username.</label><br><br>
+    <input type = "text" name = "username" placeholder = "Write your username." minlength = "2" size = "45" autocomplete = "off" required><br><br>
+    <label>Enter your password.</label><br><br>
+    <input id = "password" type = "password" name = "password" placeholder = "Password should be of minimum 8 characters." minlength = "8" size = "45" autocomplete = "off" required><br><br>
+    <button name = "button" value = "SignUp" type = "submit">Sign Up.</button>
+</form>
+
+
+<%- include("footer.ejs") %>

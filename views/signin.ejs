@@ -1,0 +1,12 @@
+<%- include("header.ejs") %>
+
+<h1>Sign In</h1>
+<form action = "/Write" method = "post">
+    <label>Enter your username.</label><br><br>
+    <input type = "text" name = "username" placeholder = "Write your username." minlength = "2" size = "45" autocomplete = "off" required><br><br>
+    <label>Enter your password.</label><br><br>
+    <input id = "password" type = "password" name = "password" placeholder = "Write your password." minlength = "8" size = "45" autocomplete = "off" required><br><br>
+    <button name = "button" value = "SignIn" type = "submit">Sign In.</button>
+</form>
+
+<%- include("footer.ejs") %>

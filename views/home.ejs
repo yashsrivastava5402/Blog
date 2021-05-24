@@ -1,0 +1,28 @@
+<%- include("header.ejs") %>
+
+<style>
+
+</style>
+
+<ul>
+<% for(let i = 0; i < titles.length; i++){ %>
+    <l1>
+        <h2><%= titles[i] %></h2>
+        <i>Posted by <%= authors[i] %> (username : <%= usernames[i] %>)</i>
+    </li>
+    <div >
+    <!-- <% for(let j = 0; j < 100; j++){ %>
+        <%=contents[i][j]%>
+    <% } %> -->
+    <br><%= contents[i].substring(0,100) %>...
+    <form action = "/Blog" method = "post">
+        <input type = "hidden" value = "<%= titles[i] %>" name = "BlogTitle">
+        <input type = "hidden" value = "<%= contents[i] %>" name = "BlogContent">
+        <input type = "hidden" value = "<%= authors[i] %>" name = "BlogAuthor"><br>
+        <button type = "submit" value = "<%= usernames[i] %>" name = "BlogUsername">Read More.</button>
+    </form>
+    </div>
+<% } %>
+</ul>
+
+<%- include("footer.ejs") %>

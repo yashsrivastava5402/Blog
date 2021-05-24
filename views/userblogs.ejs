@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <h1>Hi <%= name %>!!</h1>
+    <nav>
+        <form action = "/Write" method = "post">
+            <button type = "submit" value = "<%= name %>">Write a Blog.</button>
+        </form><br>
+        <a href = "/">LogOut</a>
+    </nav>
+    <h2>Your Blogs!</h2>
+
+    <ul>
+    <% for(let i = 0; i < Titles.length; i++){ %>
+        <l1>
+            <h2><%= Titles[i] %></h2>
+        </li>
+        <div >
+        <br><%= Contents[i].substring(0,100) %>...
+        <form action = "/UserBlog" method = "post">
+            <input type = "hidden" value = "<%= Titles[i] %>" name = "BlogTitle">
+            <input type = "hidden" value = "<%= Contents[i] %>" name = "BlogContent"><br>
+            <button type = "submit">Read More.</button>
+        </form>
+        </div>
+    <% } %>
+    </ul>
+
+</body>
+</html>
+
+<%- include("footer.ejs") %>
